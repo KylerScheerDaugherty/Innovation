@@ -11,7 +11,7 @@ import SwiftUI
 struct InnovationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EntryView()
         }
     }
 }
