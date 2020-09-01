@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D424EDBD24FE859B00668636 /* EventDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424EDBC24FE859B00668636 /* EventDisplayView.swift */; };
+		D424EDBE24FE859B00668636 /* EventDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424EDBC24FE859B00668636 /* EventDisplayView.swift */; };
 		DF71F50724FD50B900FC3028 /* InnovationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF71F4F424FD50B800FC3028 /* InnovationApp.swift */; };
 		DF71F50824FD50B900FC3028 /* InnovationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF71F4F424FD50B800FC3028 /* InnovationApp.swift */; };
 		DF71F50924FD50B900FC3028 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF71F4F524FD50B800FC3028 /* EntryView.swift */; };
@@ -20,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D424EDBC24FE859B00668636 /* EventDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDisplayView.swift; sourceTree = "<group>"; };
 		DF71F4F424FD50B800FC3028 /* InnovationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnovationApp.swift; sourceTree = "<group>"; };
 		DF71F4F524FD50B800FC3028 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		DF71F4F624FD50B900FC3028 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 				DF71F4F624FD50B900FC3028 /* Assets.xcassets */,
 				DF71F51524FD830400FC3028 /* CreateEventView.swift */,
 				DF71F51824FD8AC900FC3028 /* ColorManager.swift */,
+				D424EDBC24FE859B00668636 /* EventDisplayView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -197,6 +201,7 @@
 			files = (
 				DF71F51624FD830400FC3028 /* CreateEventView.swift in Sources */,
 				DF71F50924FD50B900FC3028 /* EntryView.swift in Sources */,
+				D424EDBD24FE859B00668636 /* EventDisplayView.swift in Sources */,
 				DF71F50724FD50B900FC3028 /* InnovationApp.swift in Sources */,
 				DF71F51924FD8AC900FC3028 /* ColorManager.swift in Sources */,
 			);
@@ -208,6 +213,7 @@
 			files = (
 				DF71F51724FD830400FC3028 /* CreateEventView.swift in Sources */,
 				DF71F50A24FD50B900FC3028 /* EntryView.swift in Sources */,
+				D424EDBE24FE859B00668636 /* EventDisplayView.swift in Sources */,
 				DF71F50824FD50B900FC3028 /* InnovationApp.swift in Sources */,
 				DF71F51A24FD8AC900FC3028 /* ColorManager.swift in Sources */,
 			);
