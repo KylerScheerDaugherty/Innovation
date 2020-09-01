@@ -12,6 +12,7 @@ struct EventDisplayView: View {
     @State var location: String = ""
     @State var description: String = ""
     
+    
     var body: some View {
         VStack(alignment: .center, spacing: 50, content: {
             Text("MacDonalds")
@@ -23,11 +24,22 @@ struct EventDisplayView: View {
 //            Text("MacDonalds")
             //Shouldn't hard-code, but it works
             Spacer(minLength: 242)
-            Button(action: {
-                            debugPrint("hi")
-                        }) {
-                Text("Yay")
-            }
+            HStack(alignment: .center, spacing: 50, content: {
+                Button(action: {
+                                debugPrint("hi")
+                            }) {
+                    Image("thumbs_up")
+                        .resizable()
+                        .scaledToFit()
+                }
+                Button(action: {
+                                debugPrint("hi")
+                            }) {
+                    Image("thumbs_down")
+                        .resizable()
+                        .scaledToFit()
+                }
+            })
         })
         .padding(.top, 40.0)
         .navigationBarTitle("Restaurant Details", displayMode: .inline)
