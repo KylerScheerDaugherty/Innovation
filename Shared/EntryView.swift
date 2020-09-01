@@ -12,6 +12,7 @@ struct EntryView: View {
         NavigationView {
             ButtonView()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -86,21 +86,13 @@ struct DoneButton: View {
     
     var body: some View {
         GeometryReader { geometry in
-            NavigationLink(destination: EventDisplayView()) {
+            NavigationLink(destination: EventDisplayView(restaurantList: Restaurant.restaurantList)) {
                 Text("Find Me Food")
                     .font(.title)
                     .foregroundColor(.black)
                     .multilineTextAlignment(.center)
+                    .padding(/*@START_MENU_TOKEN@*/.all, 20.0/*@END_MENU_TOKEN@*/)
             }.background(ColorManager.lightBlue).frame(width: geometry.size.width, height: 50, alignment: .center)
-//            Button(action: {
-//                debugPrint("Number Of Users: \(numberOfUsers), Location: \(location), Distance: \(distance)")
-//            })
-//            {
-//                Text("Done")
-//                .frame(width: geometry.size.width, height: 50, alignment: .center)
-//                .background(ColorManager.lightBlue)
-//                .foregroundColor(.black)
-//            }
         }
     }
 }

@@ -8,34 +8,53 @@
 import SwiftUI
 
 struct EventDisplayView: View {
-    @State var restaurant: String = ""
-    @State var location: String = ""
-    @State var description: String = ""
-    
+    @State var restaurantList: [Restaurant]
+    @State var index: Int = 0
+    @State var goodRestaurants: [Restaurant] = []
+    @State var present = false
+    @State var winner = Restaurant(name: "Wendys", imageFileName: "Wendys", description: "It isn't McDonalds!")
     
     var body: some View {
         VStack(alignment: .center, spacing: 50, content: {
-            Text("MacDonalds")
+            Text(restaurantList[index].name)
                 .font(.largeTitle)
-            Image("Macdonalds")
+            Image(restaurantList[index].imageFileName)
                 .resizable()
                 .scaledToFit()
-            Text("We have a play house for your kids")
-//            Text("MacDonalds")
+            Text(restaurantList[index].description)
             //Shouldn't hard-code, but it works
             Spacer(minLength: 242)
-            HStack(alignment: .center, spacing: 50, content: {
+            HStack(alignment: .center, spacing: 1, content: {
+                NavigationLink(destination: ResultView(winner: winner), isActive: $present) {
+                    EmptyView()
+                }
+                
                 Button(action: {
-                                debugPrint("hi")
-                            }) {
-                    Image("thumbs_up")
+                    guard self.index < self.restaurantList.count - 1 else {
+                        if goodRestaurants.count != 0 {
+                            winner = restaurantList[Int.random(in: 0..<goodRestaurants.count)]
+                        }
+                        present = true
+                        return
+                    }
+                    self.index += 1
+                    
+                }) {
+                    Image("thumbs_down")
                         .resizable()
                         .scaledToFit()
                 }
                 Button(action: {
-                                debugPrint("hi")
-                            }) {
-                    Image("thumbs_down")
+                    guard self.index < self.restaurantList.count - 1 else {
+                        self.goodRestaurants.append(restaurantList[index])
+                        winner = restaurantList[Int.random(in: 0..<goodRestaurants.count)]
+                        present = true
+                        return
+                    }
+                    self.goodRestaurants.append(restaurantList[index])
+                    self.index += 1
+                }) {
+                    Image("thumbs_up")
                         .resizable()
                         .scaledToFit()
                 }
@@ -48,6 +67,6 @@ struct EventDisplayView: View {
 
 struct EventDisplayView_Previews: PreviewProvider {
     static var previews: some View {
-        EventDisplayView()
+        EventDisplayView(restaurantList: Restaurant.restaurantList)
     }
 }
