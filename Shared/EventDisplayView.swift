@@ -28,8 +28,7 @@ struct EventDisplayView: View {
                         }) {
                 Text("Yay")
             }
-            .padding(.trailing)
-        }).multilineTextAlignment(.trailing)
+        })
         .padding(.top, 40.0)
         .navigationBarTitle("Restaurant Details", displayMode: .inline)
     }
